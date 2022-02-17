@@ -3,6 +3,16 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+import {clientGraphQL, queryPage} from '../utils' 
+// const client = ...
+
+clientGraphQL
+  .query({
+    query: queryPage,
+  })
+  .then(result => console.log(result));
+
+
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
