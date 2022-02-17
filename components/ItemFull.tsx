@@ -3,13 +3,14 @@ import { Navigation, Pagination, Autoplay } from 'swiper';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css';
+import { RichText } from './RichText';
 
 interface ItemFullProps {
     itemKey: number;
     itemGallery: any;
-    itemName: string;
+    itemName: any;
     itemPrice: string;
-    itemDescription: string;
+    itemDescription: any;
     itemContent: any;
 }
 
@@ -33,11 +34,20 @@ export const ItemFull = ({itemKey, itemGallery, itemName, itemPrice, itemDescrip
             ))}
         </Swiper>
       </div>
-      <h2>{itemName}</h2>
-      <p>{itemDescription}</p>
+        <RichText
+          className=""
+          richTextContent={itemName}
+        />
       <div>
         <p>{itemPrice + ' €'}</p>
       </div>
-      <p>{itemDescription}</p>
+        <RichText
+          className=""
+          richTextContent={itemDescription}
+        />
+        <RichText
+          className=""
+          richTextContent={itemContent}
+        />
     </article>
 );

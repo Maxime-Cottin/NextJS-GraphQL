@@ -27,10 +27,10 @@ const PageArticle = ({articles}: PageArticleProps) => {
             <ItemFull
               itemKey={key}
               itemGallery={replique.node.gallery}
-              itemName={replique.name}
+              itemName={replique.node.name}
               itemPrice={replique.node.price}
-              itemDescription={replique.product_description}
-              itemContent={replique.product_content}
+              itemDescription={replique.node.product_description}
+              itemContent={replique.node.product_content}
             />
           </div>
         )})}
