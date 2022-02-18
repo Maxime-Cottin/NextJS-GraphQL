@@ -1,10 +1,10 @@
 import Head from "next/head";
-import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
-import { ItemList } from "../components/ItemList";
-import { TabBar } from "../components/Tabbar";
+import { Footer } from "../../components/Footer";
+import { Header } from "../../components/Header";
+import { ItemFull } from "../../components/ItemFull";
+import { TabBar } from "../../components/Tabbar";
 
-import { clientGraphQL, queryRepliques } from "../utils";
+import { clientGraphQL, queryRepliques } from "../../utils";
 
 interface PageArticleProps {
     articles: any;
@@ -12,13 +12,11 @@ interface PageArticleProps {
 const PageArticle = ({articles}: PageArticleProps) => {
   // Log on client side
   // console.log('This is client side');
+  console.log(articles)
   return (
     <main>
       <Head>
         <script src="https://kit.fontawesome.com/ec5d791fc6.js"></script>
-        <style>
-          @import url("https://use.typekit.net/jti2uof.css");
-        </style>
       </Head>
       <Header />
       <TabBar />
@@ -28,12 +26,13 @@ const PageArticle = ({articles}: PageArticleProps) => {
         {articles.map((replique: any, key: number) => {
           return (
           <div>
-            <ItemList
+            <ItemFull
               itemKey={key}
-              itemCover={replique.node.gallery[0].image}
+              itemGallery={replique.node.gallery}
               itemName={replique.node.name}
               itemPrice={replique.node.price}
-              itemSlug={replique.node._meta.uid}
+              itemDescription={replique.node.product_description}
+              itemContent={replique.node.product_content}
             />
           </div>
         )})}

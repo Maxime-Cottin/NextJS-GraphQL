@@ -6,10 +6,15 @@ interface ItemListProps {
     itemCover: any;
     itemName: any;
     itemPrice: string;
+    itemSlug: string;
 }
 
-export const ItemList = ({itemKey, itemCover, itemName, itemPrice}: ItemListProps) => (
-    <Link href="">
+export const ItemList = ({itemKey, itemCover, itemName, itemPrice, itemSlug}: ItemListProps) => (
+    // <Link href={{
+    //   pathname: "/PageArticle/",
+    //   query: {find: itemSlug},
+    // }}>
+    <Link href="416d">
       <a>
         <article key ={itemKey}>
           <div>
@@ -20,6 +25,7 @@ export const ItemList = ({itemKey, itemCover, itemName, itemPrice}: ItemListProp
               richTextContent={itemName}
             />
         <p>{itemPrice + ' €'}</p>
+        <p>{itemSlug}</p>
         </article>
       </a>
     </Link>

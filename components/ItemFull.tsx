@@ -6,7 +6,6 @@ import 'swiper/css';
 import { RichText } from './RichText';
 
 interface ItemFullProps {
-    itemKey: number;
     itemGallery: any;
     itemName: any;
     itemPrice: string;
@@ -14,8 +13,8 @@ interface ItemFullProps {
     itemContent: any;
 }
 
-export const ItemFull = ({itemKey, itemGallery, itemName, itemPrice, itemDescription, itemContent}: ItemFullProps) => (
-    <article key ={itemKey}>
+export const ItemFull = ({itemGallery, itemName, itemPrice, itemDescription, itemContent}: ItemFullProps) => (
+    <article>
       <div>
         <Swiper
             modules={[Navigation, Pagination, Autoplay]}
