@@ -24,6 +24,7 @@ export const ItemFull = ({itemKey, itemGallery, itemName, itemPrice, itemDescrip
             navigation
             autoplay={{ delay: 3000 }}
             pagination={{ clickable: true }}
+            className="swiperArticle"
             >
             {itemGallery.map((slide: any, key: number) => (
                 <SwiperSlide key={key}>

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
-import { ItemFull } from "../components/ItemFull";
+import { ItemList } from "../components/ItemList";
 import { TabBar } from "../components/Tabbar";
 
 import { clientGraphQL, queryPage } from "../utils";
@@ -17,6 +17,9 @@ const PageArticle = ({articles}: PageArticleProps) => {
     <main>
       <Head>
         <script src="https://kit.fontawesome.com/ec5d791fc6.js"></script>
+        <style>
+          @import url("https://use.typekit.net/jti2uof.css");
+        </style>
       </Head>
       <Header />
       <TabBar />
@@ -26,13 +29,11 @@ const PageArticle = ({articles}: PageArticleProps) => {
         {articles.map((replique: any, key: number) => {
           return (
           <div>
-            <ItemFull
+            <ItemList
               itemKey={key}
-              itemGallery={replique.node.gallery}
+              itemCover={replique.node.gallery[0].image}
               itemName={replique.node.name}
               itemPrice={replique.node.price}
-              itemDescription={replique.node.product_description}
-              itemContent={replique.node.product_content}
             />
           </div>
         )})}

@@ -1,3 +1,55 @@
 body {
   background-color: slategray;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0; //24px
+}
+
+header {
+  img {
+    height: 4rem; //64px
+  }
+}
+
+footer {
+  background-color: darkolivegreen;
+  font-size: 0.75rem; //12px
+  font-weight: 300;
+  margin-bottom: 70px;
+  p,
+  a {
+    color: lightgrey;
+  }
+}
+
+section {
+  padding: 0 1.5rem;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  img {
+    width: 100%;
+  }
+}
+
+.swiperArticle {
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #2794ab;
+  }
+  .swiper-pagination-bullet {
+    transform: scale(0.75);
+    transition-duration: 300ms;
+  }
+  .swiper-pagination-bullet-active {
+    transform: scale(1.5);
+    background-color: #2794ab;
+    transition-duration: 300ms;
+  }
 }

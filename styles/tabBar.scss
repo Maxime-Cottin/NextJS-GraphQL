@@ -1,0 +1,34 @@
+.tabBar {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 10;
+  backdrop-filter: blur(0.5rem);
+  position: fixed;
+  bottom: 0;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    i {
+      padding-bottom: 0.5rem;
+    }
+    p {
+      font-size: 0.75rem;
+      margin: 0;
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+  .active {
+    color: #2794ab;
+  }
+}
