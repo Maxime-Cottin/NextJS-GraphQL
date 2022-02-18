@@ -4,7 +4,7 @@ import { Header } from "../components/Header";
 import { ItemFull } from "../components/ItemFull";
 import { TabBar } from "../components/Tabbar";
 
-import { clientGraphQL, queryPage } from "../utils";
+import { clientGraphQL, queryRepliques } from "../utils";
 
 interface PageArticleProps {
     articles: any;
@@ -47,7 +47,7 @@ export async function getStaticProps() {
   console.log('This is server side');
   // Get data from API
   const data = await clientGraphQL.query({
-    query: queryPage,
+    query: queryRepliques,
   });
 
   return {

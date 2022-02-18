@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { RichText } from './RichText';
 
 interface ItemListProps {
@@ -8,17 +9,18 @@ interface ItemListProps {
 }
 
 export const ItemList = ({itemKey, itemCover, itemName, itemPrice}: ItemListProps) => (
-    <article key ={itemKey}>
-      <div>
-          <img src={itemCover.url} />
-      </div>
-        <RichText
-          className=""
-          richTextContent={itemName}
-        />
-      <div>
+    <Link href="">
+      <a>
+        <article key ={itemKey}>
+          <div>
+              <img src={itemCover.url} />
+          </div>
+            <RichText
+              className=""
+              richTextContent={itemName}
+            />
         <p>{itemPrice + ' €'}</p>
-        <i className="fa-solid fa-cart-arrow-down"></i>
-      </div>
-    </article>
+        </article>
+      </a>
+    </Link>
 );

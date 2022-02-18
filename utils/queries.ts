@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-export const queryPage = gql`
+export const queryRepliques = gql`
   query Articles {
     allArticles {
       edges {
@@ -13,10 +13,6 @@ export const queryPage = gql`
           product_description
           content_of_the_box
           product_brand {
-            __typename
-            _linkType
-          }
-          product_brand {
             ... on Brand {
               name
               logo
@@ -25,6 +21,10 @@ export const queryPage = gql`
                 _linkType
               }
             }
+          }
+          gun_type
+          _meta {
+            uid
           }
         }
       }
