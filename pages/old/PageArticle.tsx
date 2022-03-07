@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { ItemFull } from "../../components/ItemFull";
-import { TabBar } from "../../components/Tabbar";
+import { TabBar } from "../../components/TabBar";
 
 import { clientGraphQL, queryRepliques } from "../../utils";
 
@@ -27,7 +27,7 @@ const PageArticle = ({articles}: PageArticleProps) => {
           return (
           <div>
             <ItemFull
-              itemKey={key}
+
               itemGallery={replique.node.gallery}
               itemName={replique.node.name}
               itemPrice={replique.node.price}

@@ -1,7 +1,8 @@
 body {
-  background-color: slategray;
+  background-color: #303952;
   margin: 0;
   font-family: sans-serif;
+  color: #f1f2f6;
 }
 
 header,
@@ -23,7 +24,12 @@ footer {
 }
 footer p,
 footer a {
-  color: lightgrey;
+  color: #f1f2f6;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 section {
@@ -34,6 +40,56 @@ section {
 }
 section img {
   width: 100%;
+}
+
+.cardItem {
+  text-decoration: none;
+}
+.cardItem article {
+  border-radius: 1rem;
+  background-color: rgba(241, 242, 246, 0.15);
+  backdrop-filter: blur(0.5rem);
+  margin-bottom: 2rem;
+}
+.cardItem article .imgContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.cardItem article .imgContainer img {
+  aspect-ratio: 16/9;
+  width: 90%;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.cardItem article .txtCard {
+  padding: 0.75rem 1.25rem;
+  color: #f1f2f6;
+}
+.cardItem article .txtCard .itemName {
+  padding: 0;
+}
+.cardItem article .txtCard .itemName h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.cardItem article .txtCard .itemName p {
+  font-weight: 300;
+}
+.cardItem article .txtCard .itemName h2,
+.cardItem article .txtCard .itemName p {
+  margin: 0;
+}
+.cardItem article .txtCard div {
+  display: flex;
+  justify-content: space-between;
+}
+.cardItem:hover .txtCard {
+  color: #cf6a87;
 }
 
 /*# sourceMappingURL=globals.css.map */

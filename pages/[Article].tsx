@@ -1,47 +1,52 @@
-import { gql } from "@apollo/client";
+// Import components from Next
 import Head from "next/head";
-import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
-import { ItemFull } from "../components/ItemFull";
-import { TabBar } from "../components/Tabbar";
 
+// Import custom components
+import { 
+  Footer, 
+  Header, 
+  ItemFull, 
+  TabBar } from "../components";
+
+// Other imports
 import { clientGraphQL, queryFindReplique } from "../utils";
 
 interface PageArticleDetailsProps {
     replique: any;
+    uid: any
 }
-const PageArticleDetails = ({replique}: PageArticleDetailsProps) => {
-    console.log(replique)
-
+const PageArticleDetails = ({replique, uid}: PageArticleDetailsProps) => {
   return (
     <main>
       <Head>
         <script src="https://kit.fontawesome.com/ec5d791fc6.js"></script>
       </Head>
+
       <Header />
+
       <TabBar />
+
       <section>
         <h1>Nos répliques</h1>
           <div>
             <ItemFull
-              itemGallery={replique.gallery}
-              itemName={replique.name}
-              itemPrice={replique.price}
-              itemDescription={replique.product_description}
-              itemContent={replique.product_content}
+              itemGallery={replique.node.gallery}
+              itemName={replique.node.name}
+              itemPrice={replique.node.price}
+              itemDescription={replique.node.product_description}
+              itemContent={replique.node.product_content}
             />
           </div>
       </section>
+      
       <Footer />
     </main>
   )
 }
 
-export async function getServerSideProps() {
-    const uid = {ItemFull.itemSlug}
-  // Log only on server side
-  console.log('This is server side');
-  // Get data from API
+export async function getServerSideProps({params}) {
+  // const uid = (params?.path as string[])?.join('/') || 'PageShop';
+  const uid = params.Article
   const data = await clientGraphQL.query({
     query: queryFindReplique,
     variables: {
@@ -51,7 +56,7 @@ export async function getServerSideProps() {
 
   return {
     props : { 
-        articles: data.data.allArticles.edges[0]
+        replique: data.data.allArticles.edges[0],
     },
   }
 }

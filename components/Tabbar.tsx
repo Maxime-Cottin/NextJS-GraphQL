@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const TabBar = () => (
     <div className="tabBar">
-        <Link href="/">
+        <Link href="/PageShop">
             <a className="active">
                 <i className="fa-solid fa-shop"></i>
                 <p>Shop</p>

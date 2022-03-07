@@ -1,15 +1,27 @@
 .swiperArticle {
   .swiper-button-prev,
   .swiper-button-next {
-    color: #2794ab;
+    color: #4a69bd;
   }
   .swiper-pagination-bullet {
     transform: scale(0.75);
     transition-duration: 300ms;
+    background-color: #4a69bd;
   }
   .swiper-pagination-bullet-active {
     transform: scale(1.5);
-    background-color: #2794ab;
+    background-color: #4a69bd;
     transition-duration: 300ms;
+  }
+  .swiper-slide {
+    background-color: white;
+    display: flex;
+    img {
+      width: 90%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }

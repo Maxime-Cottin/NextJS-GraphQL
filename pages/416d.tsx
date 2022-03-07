@@ -1,8 +1,9 @@
 import Head from "next/head";
-import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
-import { ItemFull } from "../components/ItemFull";
-import { TabBar } from "../components/Tabbar";
+import { 
+  Footer,
+   Header, 
+   ItemFull, 
+   TabBar } from "../components";
 
 import { clientGraphQL, queryFindReplique } from "../utils";
 

@@ -1,31 +1,37 @@
 body {
-  background-color: slategray;
+  background-color: #303952;
   margin: 0;
   font-family: sans-serif;
+  color: rgb(241, 242, 246);
 }
 
 header,
 footer {
   display: flex;
   justify-content: center;
-  padding: 1.5rem 0; //24px
+  padding: 1.5rem 0;
 }
 
 header {
   img {
-    height: 4rem; //64px
+    height: 4rem;
   }
 }
 
 footer {
   background-color: darkolivegreen;
-  font-size: 0.75rem; //12px
+  font-size: 0.75rem;
   font-weight: 300;
   margin-bottom: 70px;
   p,
   a {
-    color: lightgrey;
+    color: rgb(241, 242, 246);
   }
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 section {
@@ -35,5 +41,57 @@ section {
   margin-right: auto;
   img {
     width: 100%;
+  }
+}
+
+.cardItem {
+  text-decoration: none;
+  article {
+    border-radius: 1rem;
+    background-color: rgba(241, 242, 246, 0.15);
+    backdrop-filter: blur(0.5rem);
+    margin-bottom: 2rem;
+    .imgContainer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      img {
+        aspect-ratio: 16/9;
+        width: 90%;
+        object-fit: cover;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+      }
+    }
+    .txtCard {
+      padding: 0.75rem 1.25rem;
+      color: rgb(241, 242, 246);
+      .itemName {
+        padding: 0;
+        h2 {
+          font-weight: 700;
+          font-size: 1.5rem;
+          padding-bottom: 1rem;
+        }
+        p {
+          font-weight: 300;
+        }
+        h2,
+        p {
+          margin: 0;
+        }
+      }
+      div {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  &:hover {
+    .txtCard {
+      color: #cf6a87;
+    }
   }
 }

@@ -10,22 +10,24 @@ interface ItemListProps {
 }
 
 export const ItemList = ({itemKey, itemCover, itemName, itemPrice, itemSlug}: ItemListProps) => (
-    // <Link href={{
-    //   pathname: "/PageArticle/",
-    //   query: {find: itemSlug},
-    // }}>
-    <Link href="416d">
-      <a>
+    <Link href={{
+      pathname: "/" + itemSlug,
+    }}>
+      <a className="cardItem">
         <article key ={itemKey}>
-          <div>
-              <img src={itemCover.url} />
+          <div className="imgContainer">
+            <img src={itemCover.url} />
           </div>
+          <div className='txtCard'>
             <RichText
-              className=""
+              className="itemName"
               richTextContent={itemName}
             />
-        <p>{itemPrice + ' €'}</p>
-        <p>{itemSlug}</p>
+            <div>
+              <p>{itemPrice + ' €'}</p>
+              <i className="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
         </article>
       </a>
     </Link>

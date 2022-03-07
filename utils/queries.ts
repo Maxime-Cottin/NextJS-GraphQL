@@ -33,8 +33,8 @@ export const queryRepliques = gql`
 `;
 
 export const queryFindReplique = gql`
-  query FindReplique {
-    allArticles(uid: "tokyo-marui-416d-next-gen-recoil") {
+  query FindReplique($uid: String) {
+    allArticles(uid: $uid) {
       edges {
         node {
           name
