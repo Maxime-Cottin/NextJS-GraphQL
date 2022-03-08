@@ -1,0 +1,10 @@
+#presentation {
+  text-align: center;
+  .videoFrame {
+    iframe {
+      margin-top: 2rem;
+      width: 100%;
+      aspect-ratio: 16/9;
+    }
+  }
+}

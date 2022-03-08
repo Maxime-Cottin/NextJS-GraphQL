@@ -15,18 +15,19 @@ interface PageArticleDetailsProps {
     replique: any;
     uid: any
 }
-const PageArticleDetails = ({replique, uid}: PageArticleDetailsProps) => {
+const PageArticleDetails = ({replique}: PageArticleDetailsProps) => {
   return (
     <main>
       <Head>
         <script src="https://kit.fontawesome.com/ec5d791fc6.js"></script>
       </Head>
 
-      <Header />
+      <Header
+      isHomePage={false} />
 
       <TabBar />
 
-      <section>
+      <section className="articlesList">
         <h1>Nos répliques</h1>
           <div>
             <ItemFull

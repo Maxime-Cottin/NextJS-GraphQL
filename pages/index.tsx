@@ -1,11 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head';
-import { Footer } from '../components';
-import { Header } from '../components/Header';
-import { TabBar } from '../components/TabBar';
+import React from 'react';
+import { Footer, Header, TabBar, Presentation } from '../components';
 
 import {clientGraphQL, queryRepliques} from '../utils' 
-// const client = ...
 
 clientGraphQL
   .query({
@@ -13,18 +11,21 @@ clientGraphQL
   })
   .then(result => console.log(result));
 
-
-const Home: NextPage = () => {
-  return (
+  
+  const Home: NextPage = () => {
+    return (
+    <>
     <div>
       <Head>
         <script src="https://kit.fontawesome.com/ec5d791fc6.js"></script>
       </Head>
-      <Header />
+      <Header 
+      isHomePage={true} />
       <TabBar />
-      
-      <Footer />
+      <Presentation />
     </div>
+    <Footer />
+    </>
   )
 }
 

@@ -1,7 +1,13 @@
 import Link from "next/link";
 
-export const Header = () => (
-    <header>
+interface HeaderProps {
+    isHomePage : boolean;
+}
+
+export const Header = ({isHomePage} :HeaderProps) => (
+    <header
+        style={{ backgroundImage: isHomePage ? 'url("/airsoft-equipement.jpg")' : 'none', height: isHomePage ? '75vh' : '100px', position: isHomePage ? 'static': 'fixed'}}
+    >
         <div className="navContent">
             <Link href="/">
                 <a><img src="./RAS_logo.png" /></a>
@@ -30,10 +36,10 @@ export const Header = () => (
                 </Link>
             </div>
         </div>
-        <div className="catchBanner">
+        <div className="catchBanner" style={{ display: isHomePage ? 'block' : 'none'}}>
             <h1>L'immersion complète dans le monde de l'airsoft</h1>
             <p>Une boutique | Un terrain de 16 000m²</p>
-            <a href="#main">En savoir +</a>
+            <a href="#presentation">En savoir +</a>
         </div>
     </header>
 )
