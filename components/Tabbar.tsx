@@ -5,7 +5,7 @@ export const TabBar = () => (
         <Link href="/PageShop">
             <a className="active">
                 <i className="fa-solid fa-shop"></i>
-                <p>Shop</p>
+                <p>Boutique</p>
             </a>
         </Link>
         <Link href="#">
@@ -14,12 +14,13 @@ export const TabBar = () => (
                 <p>Partie</p>
             </a>
         </Link>
-        <Link href="#">
+        {/* Page under conception */}
+        {/* <Link href="#">
             <a>
                 <i className="fa-solid fa-screwdriver-wrench"></i>
                 <p>Modding</p>
             </a>
-        </Link>
+        </Link> */}
         <Link href="#">
             <a>
                 <i className="fa-solid fa-at"></i>

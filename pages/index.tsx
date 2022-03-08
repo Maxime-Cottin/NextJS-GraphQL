@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head';
+import { Footer } from '../components';
 import { Header } from '../components/Header';
 import { TabBar } from '../components/TabBar';
 
@@ -21,6 +22,8 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <TabBar />
+      
+      <Footer />
     </div>
   )
 }
