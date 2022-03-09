@@ -45,7 +45,7 @@ const PageArticleDetails = ({replique}: PageArticleDetailsProps) => {
   )
 }
 
-export async function getServerSideProps({params}) {
+export async function getServerSideProps({params} : {params:any}) {
   // const uid = (params?.path as string[])?.join('/') || 'PageShop';
   const uid = params.Article
   const data = await clientGraphQL.query({
