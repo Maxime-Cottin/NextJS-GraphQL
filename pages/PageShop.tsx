@@ -21,7 +21,8 @@ const PageArticle = ({articles}: PageArticleProps) => {
         <script src="https://kit.fontawesome.com/ec5d791fc6.js"></script>
       </Head>
 
-      <Header />
+      <Header 
+       isHomePage={false} />
 
       <TabBar />
 
