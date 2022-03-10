@@ -20,7 +20,7 @@ const PageContact = () => {
 
       <section></section>
 
-      <Footer />
+      <Footer isScroll={false} />
     </main>
   );
 };

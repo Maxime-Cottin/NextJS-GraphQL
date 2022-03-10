@@ -20,7 +20,7 @@ const PageGame = () => {
 
       <section></section>
 
-      <Footer />
+      <Footer isScroll={false} />
     </main>
   );
 };
