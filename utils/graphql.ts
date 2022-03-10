@@ -4,9 +4,9 @@ import { ApolloClient, InMemoryCache } from "@apollo/client";
 export const clientGraphQL = new ApolloClient({
   link: PrismicLink({
     uri: "https://ras-website.prismic.io/graphql",
-    catch(e) {
-      console.warn(e);
-    },
+    // catch(e) {
+    //   console.warn(e);
+    // },
   }),
   cache: new InMemoryCache(),
 });
