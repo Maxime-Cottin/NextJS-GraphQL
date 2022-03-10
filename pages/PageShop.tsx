@@ -21,7 +21,7 @@ const PageArticle = ({ articles }: PageArticleProps) => {
 
       <TabBar />
 
-      <section>
+      <section className="pageContent">
         <h1>Nos répliques</h1>
         {/* All articles repliques */}
         {articles.map((replique: any, key: number) => {

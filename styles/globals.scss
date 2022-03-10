@@ -107,6 +107,22 @@ section {
   }
 }
 
+.tabPricing {
+  .tabLine {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    border: solid black 1px;
+    & * {
+      width: 33.33%;
+    }
+  }
+}
+
+.pageContent {
+  margin-top: 160px;
+}
+
 @media (max-width: 768px) {
   header {
     background-color: transparent;

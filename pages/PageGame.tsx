@@ -2,12 +2,16 @@
 import Head from "next/head";
 
 // Import custom components
-import { Footer, Header, TabBar } from "../components";
+import { Footer, Header, RichText, TabBar } from "../components";
 
 // Other imports
-import { clientGraphQL, queryRepliques } from "../utils";
+import { clientGraphQL, queryPageGame } from "../utils";
+interface PageGameProps {
+  pageContent: any;
+}
 
-const PageGame = () => {
+const PageGame = ({ pageContent }: PageGameProps) => {
+  console.log(pageContent);
   return (
     <main>
       <Head>
@@ -18,9 +22,57 @@ const PageGame = () => {
 
       <TabBar />
 
-      <section></section>
+      <section className="pageContent">
+        <img src={pageContent.cover.url} alt="" />
+        {pageContent.body.map((slice: any, key: number) => {
+          switch (slice.type) {
+            case "titlentable":
+              return (
+                <div>
+                  <RichText
+                    className=""
+                    richTextContent={slice.primary.title}
+                  />
+                  <div className="tabPricing">
+                    {slice.fields.map((tabLine: any, key: number) => {
+                      return (
+                        <div className="tabLine">
+                          <RichText
+                            className=""
+                            richTextContent={tabLine.line_name}
+                          />
+                          <p>{tabLine.line_price} €</p>
+                          <RichText
+                            className=""
+                            richTextContent={tabLine.line_details}
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
 
-      <Footer isScroll={false} />
+              break;
+            case "titlentext":
+              return (
+                <div>
+                  <RichText
+                    className=""
+                    richTextContent={slice.primary.title}
+                  />
+                  <RichText className="" richTextContent={slice.primary.text} />
+                </div>
+              );
+              break;
+
+            default:
+              break;
+          }
+        })}
+      </section>
+
+      <Footer isScroll={true} />
     </main>
   );
 };
@@ -30,12 +82,12 @@ export async function getStaticProps() {
   console.log("This is server side");
   // Get data from API
   const data = await clientGraphQL.query({
-    query: queryRepliques,
+    query: queryPageGame,
   });
 
   return {
     props: {
-      articles: data.data.allArticles.edges,
+      pageContent: data.data.allPagegames.edges[0].node,
     },
   };
 }

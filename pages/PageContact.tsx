@@ -18,7 +18,7 @@ const PageContact = () => {
 
       <TabBar />
 
-      <section></section>
+      <section className="pageContent"></section>
 
       <Footer isScroll={false} />
     </main>
