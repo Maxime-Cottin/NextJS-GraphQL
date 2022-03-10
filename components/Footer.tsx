@@ -11,7 +11,7 @@ export const Footer = ({ isScroll }: FooterProps) => (
     }}
   >
     <p>
-      Site crée par{" "}
+      Site crée par
       <Link href="https://github.com/Maxime-Cottin">
         <a>Maxime Cottin</a>
       </Link>

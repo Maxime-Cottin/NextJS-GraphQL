@@ -63,3 +63,35 @@ export const queryFindReplique = gql`
     }
   }
 `;
+
+export const queryPageGame = gql`
+  query PageGame {
+    allPagegames {
+      edges {
+        node {
+          cover
+          body {
+            ... on PagegameBodyTitlentext {
+              type
+              primary {
+                title
+                text
+              }
+            }
+            ... on PagegameBodyTitlentable {
+              type
+              primary {
+                title
+              }
+              fields {
+                line_name
+                line_price
+                line_details
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
