@@ -1,21 +1,7 @@
-body {
-  background-color: #303952;
-  margin: 0;
-  font-family: sans-serif;
-  color: #f1f2f6;
-}
-
-main {
-  position: relative;
-  height: 100vh;
-}
-
 header {
-  background-color: transparent;
   background-position: center;
   background-size: cover;
   top: 0;
-  padding: 1rem 0;
   width: 100%;
   z-index: 10;
 }
@@ -49,36 +35,195 @@ header .navContent .navBar a:hover {
   color: #f5cd79;
 }
 
+.tabBar {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(100, 100, 100, 0.5);
+  z-index: 10;
+  backdrop-filter: blur(0.5rem);
+  position: fixed;
+  bottom: 0;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 1rem 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.tabBar a {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+.tabBar a i {
+  padding-bottom: 0.5rem;
+}
+.tabBar a p {
+  font-size: 0.75rem;
+  margin: 0;
+}
+.tabBar a:hover {
+  color: #fff;
+}
+.tabBar .active {
+  color: #f5cd79;
+}
+
+.catchBanner {
+  max-width: 1150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+.catchBanner h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.catchBanner p {
+  font-weight: 300;
+  margin-bottom: 3.5rem;
+}
+.catchBanner a {
+  padding: 1.5rem 3rem;
+  background-color: #f5cd79;
+  color: black;
+  font-weight: 600;
+  font-size: 2rem;
+  text-decoration: none;
+  border-radius: 1rem;
+}
+.catchBanner a:hover {
+  background-color: brown;
+}
+
+@media (min-width: 768px) {
+  header {
+    padding: 1rem 0;
+    background-color: #46464680;
+  }
+  header .navContent {
+    justify-content: space-between;
+  }
+  header .navContent .navBar {
+    display: flex;
+  }
+
+  .tabBar {
+    display: none;
+  }
+
+  .catchBanner h1 {
+    font-size: 5rem;
+  }
+}
 footer {
   width: 100%;
-  height: 105px;
+  height: 7rem;
   bottom: 0;
-  background-color: darkolivegreen;
+  background-color: #f5cd79;
   font-size: 0.75rem;
   font-weight: 300;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 3.5rem;
 }
-footer p,
-footer a {
+
+#presentation {
+  text-align: center;
+}
+#presentation .videoFrame iframe {
+  margin-top: 2rem;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.swiperArticle .swiper-button-prev,
+.swiperArticle .swiper-button-next {
+  color: #4a69bd;
+}
+.swiperArticle .swiper-pagination-bullet {
+  transform: scale(0.75);
+  transition-duration: 300ms;
+  background-color: #4a69bd;
+}
+.swiperArticle .swiper-pagination-bullet-active {
+  transform: scale(1.5);
+  background-color: #4a69bd;
+  transition-duration: 300ms;
+}
+.swiperArticle .swiper-slide {
+  background-color: white;
+  display: flex;
+}
+.swiperArticle .swiper-slide img {
+  width: 90%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background-color: #303952;
+  margin: 0;
+  font-family: sans-serif;
   color: #f1f2f6;
+}
+
+main {
+  position: relative;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  padding-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0.75rem 0 1.5rem;
 }
 
 p {
   margin-block-start: 0;
   margin-block-end: 0;
+  line-height: 1.75rem;
+}
+p.articlePrice {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-bottom: 1.5rem;
+  color: #f5cd79;
+}
+
+li {
+  line-height: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+a {
+  color: inherit;
 }
 
 section {
   padding: 0 1.5rem;
   max-width: 1150px;
+  margin-top: 7rem;
   margin-left: auto;
   margin-right: auto;
-}
-section img {
-  width: 100%;
 }
 
 .cardItem {
@@ -163,104 +308,11 @@ section img {
   background-color: #00000033;
 }
 
-.pageContent {
-  margin-top: 160px;
-}
-
 .coverGame {
   width: 100%;
   max-height: 65vh;
   object-fit: cover;
   object-position: bottom;
-}
-
-.tabBar {
-  display: flex;
-  width: 100%;
-  box-sizing: border-box;
-  background-color: rgba(100, 100, 100, 0.5);
-  z-index: 10;
-  backdrop-filter: blur(0.5rem);
-  position: fixed;
-  bottom: 0;
-  border-radius: 0.5rem 0.5rem 0 0;
-  padding: 1rem 1.5rem;
-  align-items: center;
-  justify-content: space-between;
-}
-.tabBar a {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-}
-.tabBar a i {
-  padding-bottom: 0.5rem;
-}
-.tabBar a p {
-  font-size: 0.75rem;
-  margin: 0;
-}
-.tabBar a:hover {
-  color: #fff;
-}
-.tabBar .active {
-  color: #f5cd79;
-}
-
-.catchBanner {
-  max-width: 1150px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding: 0 1.5rem;
-  box-sizing: border-box;
-}
-.catchBanner h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-.catchBanner p {
-  font-weight: 300;
-  margin-bottom: 3.5rem;
-}
-.catchBanner a {
-  padding: 1.5rem 3rem;
-  background-color: #f5cd79;
-  color: black;
-  font-weight: 600;
-  font-size: 2rem;
-  text-decoration: none;
-  border-radius: 1rem;
-}
-.catchBanner a:hover {
-  background-color: brown;
-}
-
-@media (min-width: 768px) {
-  header {
-    background-color: #46464680;
-  }
-  header .navContent {
-    justify-content: space-between;
-  }
-  header .navContent .navBar {
-    display: flex;
-  }
-
-  .tabBar {
-    display: none;
-  }
-
-  .catchBanner h1 {
-    font-size: 5rem;
-  }
 }
 
 /*# sourceMappingURL=globals.css.map */

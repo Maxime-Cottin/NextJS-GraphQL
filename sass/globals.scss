@@ -1,0 +1,158 @@
+// Import partial files
+@import "partials/config";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/presentation";
+@import "partials/swiper";
+
+// Tag settings
+body {
+  background-color: #303952;
+  margin: 0;
+  font-family: sans-serif;
+  color: #f1f2f6;
+}
+
+main {
+  position: relative;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  padding-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0.75rem 0 1.5rem;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  line-height: 1.75rem;
+  &.articlePrice {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-bottom: 1.5rem;
+    color: $yellow;
+  }
+}
+
+li {
+  line-height: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+a {
+  color: inherit;
+}
+
+section {
+  padding: 0 1.5rem;
+  max-width: 1150px;
+  margin-top: 7rem;
+  margin-left: auto;
+  margin-right: auto;
+  // img {
+  //   width: 100%;
+  // }
+}
+
+.cardItem {
+  text-decoration: none;
+  article {
+    border-radius: 1rem;
+    background-color: rgba(241, 242, 246, 0.15);
+    backdrop-filter: blur(0.5rem);
+    margin-bottom: 2rem;
+    .imgContainer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      img {
+        aspect-ratio: 16/9;
+        width: 90%;
+        object-fit: cover;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+      }
+    }
+    .txtCard {
+      padding: 0.75rem 1.25rem;
+      color: rgb(241, 242, 246);
+      .itemName {
+        padding: 0;
+        h2 {
+          font-weight: 700;
+          font-size: 1.5rem;
+          padding-bottom: 1rem;
+        }
+        p {
+          font-weight: 300;
+        }
+        h2,
+        p {
+          margin: 0;
+        }
+      }
+      div {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  &:hover {
+    .txtCard {
+      color: #cf6a87;
+    }
+  }
+}
+
+.tabPricing {
+  .tabLine {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 64px;
+    border: solid black 1px;
+    .name {
+      padding: 24px 0 24px 24px;
+      & p {
+        padding: 0;
+      }
+    }
+    .price {
+      font-weight: 600;
+      text-align: center;
+      padding: 24px;
+    }
+    .details {
+      text-align: right;
+      padding: 24px 24px 24px 0;
+      & p {
+        padding: 0;
+      }
+    }
+    & * {
+      height: 100%;
+      box-sizing: border-box;
+    }
+    &:nth-child(odd) {
+      background-color: #00000033;
+    }
+  }
+}
+
+.coverGame {
+  width: 100%;
+  max-height: 65vh;
+  object-fit: cover;
+  object-position: bottom;
+}
