@@ -11,16 +11,42 @@ main {
 }
 
 header {
-  background-color: rgba(100, 100, 100, 0.5);
+  background-color: transparent;
   background-position: center;
   background-size: cover;
-  padding-bottom: 1.5rem;
   top: 0;
+  padding: 1rem 0;
   width: 100%;
-  z-index: 20;
+  z-index: 10;
 }
 header img {
   height: 4rem;
+}
+header .navContent {
+  box-sizing: border-box;
+  max-width: 1150px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .navContent .navBar {
+  display: none;
+}
+header .navContent .navBar a {
+  color: white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-left: 2.5rem;
+  font-weight: 700;
+}
+header .navContent .navBar a:hover {
+  color: #f5cd79;
 }
 
 footer {
@@ -106,22 +132,134 @@ section img {
 }
 
 .tabPricing .tabLine {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   height: 64px;
   border: solid black 1px;
 }
+.tabPricing .tabLine .name {
+  padding: 24px 0 24px 24px;
+}
+.tabPricing .tabLine .name p {
+  padding: 0;
+}
+.tabPricing .tabLine .price {
+  font-weight: 600;
+  text-align: center;
+  padding: 24px;
+}
+.tabPricing .tabLine .details {
+  text-align: right;
+  padding: 24px 24px 24px 0;
+}
+.tabPricing .tabLine .details p {
+  padding: 0;
+}
 .tabPricing .tabLine * {
-  width: 33.33%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.tabPricing .tabLine:nth-child(odd) {
+  background-color: #00000033;
 }
 
 .pageContent {
   margin-top: 160px;
 }
 
-@media (max-width: 768px) {
+.coverGame {
+  width: 100%;
+  max-height: 65vh;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.tabBar {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(100, 100, 100, 0.5);
+  z-index: 10;
+  backdrop-filter: blur(0.5rem);
+  position: fixed;
+  bottom: 0;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 1rem 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.tabBar a {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+.tabBar a i {
+  padding-bottom: 0.5rem;
+}
+.tabBar a p {
+  font-size: 0.75rem;
+  margin: 0;
+}
+.tabBar a:hover {
+  color: #fff;
+}
+.tabBar .active {
+  color: #f5cd79;
+}
+
+.catchBanner {
+  max-width: 1150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+.catchBanner h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.catchBanner p {
+  font-weight: 300;
+  margin-bottom: 3.5rem;
+}
+.catchBanner a {
+  padding: 1.5rem 3rem;
+  background-color: #f5cd79;
+  color: black;
+  font-weight: 600;
+  font-size: 2rem;
+  text-decoration: none;
+  border-radius: 1rem;
+}
+.catchBanner a:hover {
+  background-color: brown;
+}
+
+@media (min-width: 768px) {
   header {
-    background-color: transparent;
+    background-color: #46464680;
+  }
+  header .navContent {
+    justify-content: space-between;
+  }
+  header .navContent .navBar {
+    display: flex;
+  }
+
+  .tabBar {
+    display: none;
+  }
+
+  .catchBanner h1 {
+    font-size: 5rem;
   }
 }
 

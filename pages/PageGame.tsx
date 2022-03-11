@@ -22,13 +22,13 @@ const PageGame = ({ pageContent }: PageGameProps) => {
 
       <TabBar />
 
+      <img src={pageContent.cover.url} alt="" className="coverGame" />
       <section className="pageContent">
-        <img src={pageContent.cover.url} alt="" />
         {pageContent.body.map((slice: any, key: number) => {
           switch (slice.type) {
             case "titlentable":
               return (
-                <div>
+                <div key={key}>
                   <RichText
                     className=""
                     richTextContent={slice.primary.title}
@@ -36,14 +36,14 @@ const PageGame = ({ pageContent }: PageGameProps) => {
                   <div className="tabPricing">
                     {slice.fields.map((tabLine: any, key: number) => {
                       return (
-                        <div className="tabLine">
+                        <div className="tabLine" key={key}>
                           <RichText
-                            className=""
+                            className="name"
                             richTextContent={tabLine.line_name}
                           />
-                          <p>{tabLine.line_price} €</p>
+                          <p className="price">{tabLine.line_price} €</p>
                           <RichText
-                            className=""
+                            className="details"
                             richTextContent={tabLine.line_details}
                           />
                         </div>
@@ -56,7 +56,7 @@ const PageGame = ({ pageContent }: PageGameProps) => {
               break;
             case "titlentext":
               return (
-                <div>
+                <div key={key}>
                   <RichText
                     className=""
                     richTextContent={slice.primary.title}
