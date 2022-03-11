@@ -11,28 +11,96 @@ header img {
 header .navContent {
   box-sizing: border-box;
   max-width: 1150px;
-  height: 100px;
+  height: 7rem;
   margin-left: auto;
   margin-right: auto;
-  padding: 1.5rem 3rem;
+  padding: 0 3rem;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 header .navContent .navBar {
   display: none;
 }
 header .navContent .navBar a {
-  color: white;
-  display: flex;
-  align-items: center;
+  color: #f1f2f6;
   text-decoration: none;
   text-transform: uppercase;
-  padding-left: 2.5rem;
+  margin-left: 2.5rem;
   font-weight: 700;
 }
 header .navContent .navBar a:hover {
   color: #f5cd79;
+}
+header .navContent .navBar a:hover p::after {
+  width: 75%;
+}
+header .navContent .navBar a:first-of-type {
+  margin-left: 0;
+}
+header .navContent .navBar a p {
+  position: relative;
+}
+header .navContent .navBar a p::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 2px;
+  left: 0;
+  top: 100%;
+  background-color: #f5cd79;
+  transition: ease-in-out 450ms;
+}
+header .navContent .navBar a.active {
+  color: #f5cd79;
+}
+header .navContent .navBar a.active p::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #f5cd79;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+.catchBanner {
+  max-width: 1150px;
+  height: calc(100% - 7rem);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+.catchBanner h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+.catchBanner p {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+.catchBanner a {
+  box-sizing: border-box;
+  position: relative;
+  padding: 1.5rem 3rem;
+  color: #f5cd79;
+  font-weight: 600;
+  font-size: 2rem;
+  text-decoration: none;
+  border-radius: 1rem;
+  border: 2px solid #f5cd79;
+  transition: ease-in-out 300ms;
+}
+.catchBanner a:hover {
+  border: 2px solid #f1f2f6;
+  color: #f1f2f6;
 }
 
 .tabBar {
@@ -40,17 +108,17 @@ header .navContent .navBar a:hover {
   width: 100%;
   box-sizing: border-box;
   background-color: rgba(100, 100, 100, 0.5);
-  z-index: 10;
   backdrop-filter: blur(0.5rem);
+  z-index: 10;
   position: fixed;
   bottom: 0;
   border-radius: 0.5rem 0.5rem 0 0;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2.5rem;
   align-items: center;
   justify-content: space-between;
 }
 .tabBar a {
-  color: white;
+  color: #f1f2f6;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,51 +131,15 @@ header .navContent .navBar a:hover {
   font-size: 0.75rem;
   margin: 0;
 }
-.tabBar a:hover {
-  color: #fff;
-}
 .tabBar .active {
   color: #f5cd79;
-}
-
-.catchBanner {
-  max-width: 1150px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding: 0 1.5rem;
-  box-sizing: border-box;
-}
-.catchBanner h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-.catchBanner p {
-  font-weight: 300;
-  margin-bottom: 3.5rem;
-}
-.catchBanner a {
-  padding: 1.5rem 3rem;
-  background-color: #f5cd79;
-  color: black;
-  font-weight: 600;
-  font-size: 2rem;
-  text-decoration: none;
-  border-radius: 1rem;
-}
-.catchBanner a:hover {
-  background-color: brown;
 }
 
 @media (min-width: 768px) {
   header {
     padding: 1rem 0;
-    background-color: #46464680;
+    background-color: rgba(100, 100, 100, 0.5);
+    backdrop-filter: blur(0.5rem);
   }
   header .navContent {
     justify-content: space-between;
