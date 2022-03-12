@@ -1,4 +1,6 @@
 header {
+  background-color: rgba(100, 100, 100, 0.5);
+  backdrop-filter: blur(0.5rem);
   background-position: center;
   background-size: cover;
   top: 0;
@@ -91,7 +93,7 @@ header {
     padding: 1.5rem 3rem;
     color: $yellow;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.25rem;
     text-decoration: none;
     border-radius: 1rem;
     border: 2px solid $yellow;
@@ -138,8 +140,6 @@ header {
 @media (min-width: 768px) {
   header {
     padding: 1rem 0;
-    background-color: rgba(100, 100, 100, 0.5);
-    backdrop-filter: blur(0.5rem);
     .navContent {
       justify-content: space-between;
       .navBar {
@@ -153,6 +153,9 @@ header {
   .catchBanner {
     h1 {
       font-size: 5rem;
+    }
+    a {
+      font-size: 2rem;
     }
   }
 }

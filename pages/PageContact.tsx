@@ -2,7 +2,7 @@
 import Head from "next/head";
 
 // Import custom components
-import { Footer, Header, TabBar } from "../components";
+import { Footer, Form, Header, TabBar } from "../components";
 
 // Other imports
 import { clientGraphQL, queryRepliques } from "../utils";
@@ -18,7 +18,9 @@ const PageContact = () => {
 
       <TabBar />
 
-      <section className="pageContent"></section>
+      <section>
+        <Form />
+      </section>
 
       <Footer isScroll={false} />
     </main>

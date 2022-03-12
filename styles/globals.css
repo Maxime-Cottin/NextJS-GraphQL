@@ -1,4 +1,6 @@
 header {
+  background-color: rgba(100, 100, 100, 0.5);
+  backdrop-filter: blur(0.5rem);
   background-position: center;
   background-size: cover;
   top: 0;
@@ -92,7 +94,7 @@ header .navContent .navBar a.active p::after {
   padding: 1.5rem 3rem;
   color: #f5cd79;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.25rem;
   text-decoration: none;
   border-radius: 1rem;
   border: 2px solid #f5cd79;
@@ -138,8 +140,6 @@ header .navContent .navBar a.active p::after {
 @media (min-width: 768px) {
   header {
     padding: 1rem 0;
-    background-color: rgba(100, 100, 100, 0.5);
-    backdrop-filter: blur(0.5rem);
   }
   header .navContent {
     justify-content: space-between;
@@ -154,6 +154,9 @@ header .navContent .navBar a.active p::after {
 
   .catchBanner h1 {
     font-size: 5rem;
+  }
+  .catchBanner a {
+    font-size: 2rem;
   }
 }
 footer {
@@ -259,10 +262,36 @@ a {
 
 section {
   padding: 0 1.5rem;
-  max-width: 1150px;
+  max-width: 768px;
   margin-top: 7rem;
+  margin-bottom: 3.5rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+label,
+input {
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  padding-bottom: 0.5rem;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.25rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: #f5cd79;
+  font-weight: 600;
+  border: none;
 }
 
 .cardItem {
@@ -312,17 +341,16 @@ section {
   justify-content: space-between;
 }
 .cardItem:hover .txtCard {
-  color: #cf6a87;
+  color: #f5cd79;
 }
 
 .tabPricing .tabLine {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 64px;
   border: solid black 1px;
 }
 .tabPricing .tabLine .name {
-  padding: 24px 0 24px 24px;
+  padding: 24px 4px 24px 24px;
 }
 .tabPricing .tabLine .name p {
   padding: 0;
@@ -331,10 +359,12 @@ section {
   font-weight: 600;
   text-align: center;
   padding: 24px;
+  border-left: solid 1px black;
+  border-right: solid 1px black;
 }
 .tabPricing .tabLine .details {
   text-align: right;
-  padding: 24px 24px 24px 0;
+  padding: 24px 24px 24px 4px;
 }
 .tabPricing .tabLine .details p {
   padding: 0;
@@ -352,6 +382,17 @@ section {
   max-height: 65vh;
   object-fit: cover;
   object-position: bottom;
+}
+
+@media (min-width: 768px) {
+  section {
+    margin-top: 10rem;
+  }
+}
+@media (min-width: 1025px) {
+  section {
+    max-width: 1150px;
+  }
 }
 
 /*# sourceMappingURL=globals.css.map */
