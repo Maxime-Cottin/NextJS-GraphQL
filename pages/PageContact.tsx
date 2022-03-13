@@ -1,11 +1,8 @@
-// Import components from Next
+// Import components from Next / React
 import Head from "next/head";
 
 // Import custom components
 import { Footer, Form, Header, TabBar } from "../components";
-
-// Other imports
-import { clientGraphQL, queryRepliques } from "../utils";
 
 const PageContact = () => {
   return (
@@ -26,20 +23,5 @@ const PageContact = () => {
     </main>
   );
 };
-
-export async function getStaticProps() {
-  // Log only on server side
-  console.log("This is server side");
-  // Get data from API
-  const data = await clientGraphQL.query({
-    query: queryRepliques,
-  });
-
-  return {
-    props: {
-      articles: data.data.allArticles.edges,
-    },
-  };
-}
 
 export default PageContact;
