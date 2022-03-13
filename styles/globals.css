@@ -187,30 +187,35 @@ footer {
   aspect-ratio: 16/9;
 }
 
-.swiperArticle .swiper-button-prev,
-.swiperArticle .swiper-button-next {
+.swiperContainer {
+  width: 100%;
+  background-color: #fff;
+}
+.swiperContainer .swiperArticle .swiper-button-prev,
+.swiperContainer .swiperArticle .swiper-button-next {
   color: #4a69bd;
 }
-.swiperArticle .swiper-pagination-bullet {
+.swiperContainer .swiperArticle .swiper-pagination-bullet {
   transform: scale(0.75);
   transition-duration: 300ms;
   background-color: #4a69bd;
 }
-.swiperArticle .swiper-pagination-bullet-active {
+.swiperContainer .swiperArticle .swiper-pagination-bullet-active {
   transform: scale(1.5);
   background-color: #4a69bd;
   transition-duration: 300ms;
 }
-.swiperArticle .swiper-slide {
+.swiperContainer .swiperArticle .swiper-slide {
   background-color: white;
+  height: 100%;
   display: flex;
 }
-.swiperArticle .swiper-slide img {
+.swiperContainer .swiperArticle .swiper-slide img {
   width: 90%;
-  aspect-ratio: 16/9;
-  object-fit: cover;
   margin-left: auto;
   margin-right: auto;
+  aspect-ratio: 16/9;
+  object-fit: contain;
 }
 
 body {
@@ -309,9 +314,9 @@ button {
   justify-content: center;
   align-items: center;
   background-color: white;
+  aspect-ratio: 16/9;
 }
 .cardItem article .imgContainer img {
-  aspect-ratio: 16/9;
   width: 90%;
   object-fit: cover;
   border-top-left-radius: 1rem;

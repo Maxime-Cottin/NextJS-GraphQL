@@ -100,8 +100,8 @@ button {
       justify-content: center;
       align-items: center;
       background-color: white;
+      aspect-ratio: 16/9;
       img {
-        aspect-ratio: 16/9;
         width: 90%;
         object-fit: cover;
         border-top-left-radius: 1rem;
