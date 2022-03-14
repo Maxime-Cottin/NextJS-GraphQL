@@ -31,10 +31,10 @@ export const Header = ({ isHomePage }: HeaderProps) => (
         </Link>
         {/* Page under conception */}
         {/* <Link href="#">
-                    <a>
-                        <p>Modding</p>
-                    </a>
-                </Link> */}
+            <a>
+                <p>Modding</p>
+            </a>
+        </Link> */}
         <Link href="/PageContact">
           <a>
             <p>Contact</p>
@@ -44,7 +44,7 @@ export const Header = ({ isHomePage }: HeaderProps) => (
     </div>
     <div
       className="catchBanner"
-      style={{ display: isHomePage ? "block" : "none" }}
+      style={{ display: isHomePage ? "flex" : "none" }}
     >
       <h1>L'immersion complète dans le monde de l'airsoft</h1>
       <p>Une boutique | Un terrain de 16 000m²</p>

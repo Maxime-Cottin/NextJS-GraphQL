@@ -23,7 +23,7 @@ const PageGame = ({ pageContent }: PageGameProps) => {
       <TabBar />
 
       <img src={pageContent.cover.url} alt="" className="coverGame" />
-      <section className="pageContent">
+      <section>
         {pageContent.body.map((slice: any, key: number) => {
           switch (slice.type) {
             case "titlentable":

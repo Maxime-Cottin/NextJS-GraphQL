@@ -95,3 +95,17 @@ export const queryPageGame = gql`
     }
   }
 `;
+
+export const queryHomePage = gql`
+  query HomePage {
+    allHomepages {
+      edges {
+        node {
+          cover
+          presentation
+          video_link
+        }
+      }
+    }
+  }
+`;

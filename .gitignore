@@ -38,3 +38,6 @@ yarn-error.log*
 
 # lock
 package-lock.json
+
+# sass map
+*.css.map
