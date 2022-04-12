@@ -1,7 +1,5 @@
-// Import components from Next
-import Head from "next/head";
-
 // Import custom components
+import Script from "next/script";
 import { Footer, Header, ItemFull, TabBar } from "../components";
 
 // Other imports
@@ -14,10 +12,6 @@ interface PageArticleDetailsProps {
 const PageArticleDetails = ({ replique }: PageArticleDetailsProps) => {
   return (
     <main>
-      <Head>
-        <script src="https://kit.fontawesome.com/ec5d791fc6.js"></script>
-      </Head>
-
       <Header isHomePage={false} />
 
       <TabBar />
@@ -36,6 +30,7 @@ const PageArticleDetails = ({ replique }: PageArticleDetailsProps) => {
       </section>
 
       <Footer isScroll={true} />
+      <Script src="https://kit.fontawesome.com/ec5d791fc6.js"></Script>
     </main>
   );
 };

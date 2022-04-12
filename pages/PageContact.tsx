@@ -1,16 +1,10 @@
-// Import components from Next / React
-import Head from "next/head";
-
 // Import custom components
+import Script from "next/script";
 import { Footer, Form, Header, TabBar } from "../components";
 
 const PageContact = () => {
   return (
     <main>
-      <Head>
-        <script src="https://kit.fontawesome.com/ec5d791fc6.js"></script>
-      </Head>
-
       <Header isHomePage={false} />
 
       <TabBar />
@@ -20,6 +14,7 @@ const PageContact = () => {
       </section>
 
       <Footer isScroll={false} />
+      <Script src="https://kit.fontawesome.com/ec5d791fc6.js"></Script>
     </main>
   );
 };

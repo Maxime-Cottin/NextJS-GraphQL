@@ -1,5 +1,6 @@
 // Import components from Next
 import Head from "next/head";
+import Script from "next/script";
 
 // Import custom components
 import { Footer, Header, ItemList, TabBar } from "../components";
@@ -13,10 +14,6 @@ interface PageArticleProps {
 const PageArticle = ({ articles }: PageArticleProps) => {
   return (
     <main>
-      <Head>
-        <script src="https://kit.fontawesome.com/ec5d791fc6.js"></script>
-      </Head>
-
       <Header isHomePage={false} />
 
       <TabBar />
@@ -26,18 +23,20 @@ const PageArticle = ({ articles }: PageArticleProps) => {
         {/* All articles repliques */}
         {articles.map((replique: any, key: number) => {
           return (
-            <ItemList
-              itemKey={key}
-              itemCover={replique.node.gallery[0].image}
-              itemName={replique.node.name}
-              itemPrice={replique.node.price}
-              itemSlug={replique.node._meta.uid}
-            />
+            <div key={key}>
+              <ItemList
+                itemCover={replique.node.gallery[0].image}
+                itemName={replique.node.name}
+                itemPrice={replique.node.price}
+                itemSlug={replique.node._meta.uid}
+              />
+            </div>
           );
         })}
       </section>
 
       <Footer isScroll={true} />
+      <Script src="https://kit.fontawesome.com/ec5d791fc6.js"></Script>
     </main>
   );
 };

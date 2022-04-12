@@ -1,8 +1,7 @@
-// Import components from Next
-import Head from "next/head";
-
 // Import custom components
+import Script from "next/script";
 import { Footer, Header, RichText, TabBar } from "../components";
+import Image from "next/image";
 
 // Other imports
 import { clientGraphQL, queryPageGame } from "../utils";
@@ -14,15 +13,11 @@ const PageGame = ({ pageContent }: PageGameProps) => {
   console.log(pageContent);
   return (
     <main>
-      <Head>
-        <script src="https://kit.fontawesome.com/ec5d791fc6.js"></script>
-      </Head>
-
       <Header isHomePage={false} />
 
       <TabBar />
 
-      <img src={pageContent.cover.url} alt="" className="coverGame" />
+      <Image src={pageContent.cover.url} alt="" className="coverGame" />
       <section>
         {pageContent.body.map((slice: any, key: number) => {
           switch (slice.type) {
@@ -73,6 +68,7 @@ const PageGame = ({ pageContent }: PageGameProps) => {
       </section>
 
       <Footer isScroll={true} />
+      <Script src="https://kit.fontawesome.com/ec5d791fc6.js"></Script>
     </main>
   );
 };

@@ -1,6 +1,5 @@
 // Import components from Next / React
-import type { NextPage } from "next";
-import Head from "next/head";
+import Script from "next/script";
 import React from "react";
 
 // Import custom components
@@ -19,14 +18,12 @@ const Home = ({ homePage }: HomePageProps) => {
   return (
     <>
       <div>
-        <Head>
-          <script src="https://kit.fontawesome.com/ec5d791fc6.js"></script>
-        </Head>
         <Header isHomePage={true} />
         <TabBar />
         <Presentation intro={homePage.presentation} video_id={linkID} />
       </div>
       <Footer isScroll={true} />
+      <Script src="https://kit.fontawesome.com/ec5d791fc6.js"></Script>
     </>
   );
 };
