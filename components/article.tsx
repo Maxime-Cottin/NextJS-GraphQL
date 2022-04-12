@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { RichText } from "./RichText";
-import Image from "next/image";
 
 interface ItemListProps {
   itemCover: any;
@@ -23,7 +22,7 @@ export const ItemList = ({
     <a className="cardItem">
       <article>
         <div className="imgContainer">
-          <Image src={itemCover.url} alt="" />
+          <img src={itemCover.url} alt="" />
         </div>
         <div className="txtCard">
           <RichText className="itemName" richTextContent={itemName} />

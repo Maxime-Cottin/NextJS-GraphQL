@@ -1,7 +1,6 @@
 // Import custom components
 import Script from "next/script";
 import { Footer, Header, RichText, TabBar } from "../components";
-import Image from "next/image";
 
 // Other imports
 import { clientGraphQL, queryPageGame } from "../utils";
@@ -17,7 +16,7 @@ const PageGame = ({ pageContent }: PageGameProps) => {
 
       <TabBar />
 
-      <Image src={pageContent.cover.url} alt="" className="coverGame" />
+      <img src={pageContent.cover.url} alt="" className="coverGame" />
       <section>
         {pageContent.body.map((slice: any, key: number) => {
           switch (slice.type) {

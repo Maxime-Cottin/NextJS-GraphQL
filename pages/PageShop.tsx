@@ -1,5 +1,4 @@
 // Import components from Next
-import Head from "next/head";
 import Script from "next/script";
 
 // Import custom components

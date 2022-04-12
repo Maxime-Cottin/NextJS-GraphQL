@@ -4,7 +4,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
 import { RichText } from "./RichText";
-import Image from "next/image";
 
 interface ItemFullProps {
   itemGallery: any;
@@ -34,7 +33,7 @@ export const ItemFull = ({
       >
         {itemGallery.map((slide: any, key: number) => (
           <SwiperSlide key={key}>
-            <Image src={slide.image.url} alt="" />
+            <img src={slide.image.url} alt="" />
           </SwiperSlide>
         ))}
       </Swiper>
