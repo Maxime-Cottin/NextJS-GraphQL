@@ -177,6 +177,10 @@ footer {
 }
 #presentation {
   text-align: center;
+  padding: 1.5rem;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
 }
 #presentation .videoFrame iframe {
   margin-top: 2rem;
@@ -199,7 +203,7 @@ footer {
   transition-duration: 300ms;
 }
 .swiperArticle .swiper-slide {
-  background-color: white;
+  background-color: #f1f2f6;
   display: flex;
 }
 .swiperArticle .swiper-slide img {
@@ -259,8 +263,9 @@ a {
 
 section {
   padding: 0 1.5rem;
-  max-width: 1150px;
-  margin-top: 7rem;
+  margin-top: 8rem;
+  max-width: 768px;
+  margin-bottom: 6rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -312,7 +317,7 @@ section {
   justify-content: space-between;
 }
 .cardItem:hover .txtCard {
-  color: #cf6a87;
+  color: #f5cd79;
 }
 
 .tabPricing .tabLine {
@@ -352,6 +357,17 @@ section {
   max-height: 65vh;
   object-fit: cover;
   object-position: bottom;
+}
+
+@media (min-width: 768px) {
+  section {
+    margin-top: 10rem;
+  }
+}
+@media (min-width: 1150px) {
+  section {
+    max-width: 1150px;
+  }
 }
 
 /*# sourceMappingURL=globals.css.map */

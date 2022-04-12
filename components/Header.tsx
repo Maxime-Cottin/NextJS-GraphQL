@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface HeaderProps {
   isHomePage: boolean;
@@ -15,7 +16,7 @@ export const Header = ({ isHomePage }: HeaderProps) => (
     <div className="navContent">
       <Link href="/">
         <a>
-          <img src="./RAS_logo.png" />
+          <Image src="./RAS_logo.png" alt="" />
         </a>
       </Link>
       <div className="navBar">
@@ -46,7 +47,7 @@ export const Header = ({ isHomePage }: HeaderProps) => (
       className="catchBanner"
       style={{ display: isHomePage ? "flex" : "none" }}
     >
-      <h1>L'immersion complète dans le monde de l'airsoft</h1>
+      <h1>L&apos;immersion complète dans le monde de l&apos;airsoft</h1>
       <p>Une boutique | Un terrain de 16 000m²</p>
       <a href="#presentation">En savoir +</a>
     </div>

@@ -1,5 +1,5 @@
 // Import components from Next
-import Head from "next/head";
+import Script from "next/script";
 
 // Import custom components
 import { Footer, Header, TabBar } from "../components";
@@ -10,10 +10,6 @@ import { clientGraphQL, queryRepliques } from "../utils";
 const PageContact = () => {
   return (
     <main>
-      <Head>
-        <script src="https://kit.fontawesome.com/ec5d791fc6.js"></script>
-      </Head>
-
       <Header isHomePage={false} />
 
       <TabBar />
@@ -21,6 +17,7 @@ const PageContact = () => {
       <section className="pageContent"></section>
 
       <Footer isScroll={false} />
+      <Script src="https://kit.fontawesome.com/ec5d791fc6.js"></Script>
     </main>
   );
 };

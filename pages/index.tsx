@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Head from "next/head";
+import Script from "next/script";
 import React from "react";
 import { Footer, Header, TabBar, Presentation } from "../components";
 
@@ -15,14 +15,12 @@ const Home: NextPage = () => {
   return (
     <>
       <div>
-        <Head>
-          <script src="https://kit.fontawesome.com/ec5d791fc6.js"></script>
-        </Head>
         <Header isHomePage={true} />
         <TabBar />
         <Presentation />
       </div>
       <Footer isScroll={true} />
+      <Script src="https://kit.fontawesome.com/ec5d791fc6.js"></Script>
     </>
   );
 };
