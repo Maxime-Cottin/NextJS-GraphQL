@@ -5,3 +5,4 @@ export * from "./article";
 export * from "./Tabbar";
 export * from "./RichText";
 export * from "./Presentation";
+export * from "./Form";

@@ -16,7 +16,7 @@ const PageArticleDetails = ({ replique }: PageArticleDetailsProps) => {
 
       <TabBar />
 
-      <section className="pageContent">
+      <section>
         <h1>Nos répliques</h1>
         <div>
           <ItemFull

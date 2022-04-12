@@ -22,7 +22,7 @@ export const ItemFull = ({
   itemContent,
 }: ItemFullProps) => (
   <article>
-    <div>
+    <div className="swiperContainer">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={1}
