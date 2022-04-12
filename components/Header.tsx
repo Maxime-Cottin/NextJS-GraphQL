@@ -16,7 +16,7 @@ export const Header = ({ isHomePage }: HeaderProps) => (
     <div className="navContent">
       <Link href="/">
         <a>
-          <Image src="./RAS_logo.png" alt="" />
+          <Image src="/RAS_logo.png" alt="" />
         </a>
       </Link>
       <div className="navBar">
