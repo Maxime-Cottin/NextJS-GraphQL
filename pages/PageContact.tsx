@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 // Import components from Next / React
 import Head from "next/head";
 
@@ -5,23 +6,23 @@ import Head from "next/head";
 import { Footer, Form, Header, TabBar } from "../components";
 
 const PageContact = () => {
-  return (
-    <main>
-      <Head>
-        <script src="https://kit.fontawesome.com/ec5d791fc6.js"></script>
-      </Head>
+	return (
+		<main>
+			<Head>
+				<script src="https://kit.fontawesome.com/ec5d791fc6.js"></script>
+			</Head>
 
-      <Header isHomePage={false} />
+			<Header isHomePage={false} />
 
-      <TabBar />
+			<TabBar />
 
-      <section>
-        <Form />
-      </section>
+			<section>
+				<Form />
+			</section>
 
-      <Footer isScroll={false} />
-    </main>
-  );
+			<Footer isScroll={false} />
+		</main>
+	);
 };
 
 export default PageContact;

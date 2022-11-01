@@ -46,7 +46,7 @@ export const Header = ({ isHomePage }: HeaderProps) => (
 			className="catchBanner"
 			style={{ display: isHomePage ? "flex" : "none" }}
 		>
-			<h1>L'immersion complète dans le monde de l'airsoft</h1>
+			<h1>L&apos;immersion complète dans le monde de l&apos;airsoft</h1>
 			<p>Une boutique | Un terrain de 16 000m²</p>
 			<a href="#presentation">En savoir +</a>
 		</div>
